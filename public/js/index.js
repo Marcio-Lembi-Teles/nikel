@@ -1,4 +1,7 @@
-
+// document.getElementById('link-conta').addEventListener('click', function() {
+//     alert('O usuário clicou no link para criar uma conta.');
+//     // console.log('O usuário clicou no link para criar uma conta.');
+// })
 
 const myModal = new bootstrap.Modal("#register-modal");
 let logged = sessionStorage.getItem("logged");
