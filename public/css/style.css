@@ -1,0 +1,147 @@
+#login {
+    background: linear-gradient(120deg, #4c79d3 44.9%, #ffffff 45%) no-repeat fixed;
+}
+
+#app {
+    background: linear-gradient(120deg, #ffffff 45%, #4c79d3 44.9%) no-repeat fixed;
+}
+
+header{
+    border-bottom: 1px solid #bebcbc;
+    padding: 5px;
+    background-color: #ffffff;
+}
+
+.color-primary {
+    color: #4e0070;
+}
+
+.color-secondary {
+    color: #4c79d3;
+}
+
+.icon-detail {
+    font-size: 50px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.text-login {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.coins {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.button-login {
+    border-radius: 10px;
+    background-color: #4e0070;
+    color: #ffffff;
+    width: 50%;
+    margin: 0 25%;
+}
+
+.button-default {
+    border-radius: 10px;
+    background-color: #4e0070  ;
+    color: #ffffff;
+}
+
+.button-cancel {
+    border-radius: 10px;
+}
+
+.button-float {
+    border-radius: 100%;
+    height: 60px;
+    width: 60px;
+    position: fixed;
+    padding: 0 !important;
+    bottom: 1rem;
+    right: 2rem;
+    font-size: 35px;
+    border: 2px solid  #4e0070;
+    background-color: #4e0070;
+    color: #ffffff;
+}
+
+.button-float:hover {
+    border: 2px solid  #4c79d3;
+    background-color: #ffffff;
+    color: #4c79d3;
+}
+
+.button-login:hover, .button-default:hover {
+    background-color: #4c79d3;
+    color: #ffffff;
+}
+
+.link-default {
+    color: #4e0070;
+    cursor: pointer;
+}
+
+.link-default:hover {
+    color: #4c79d3;
+}
+
+.info {
+    background-color: #ffffff;
+    border-radius: 20px 20px 0px 0px;
+    padding: 20px 20px 0px 0px;
+}
+
+.logout {
+    min-width: 2rem !important;
+}
+
+.menu {
+    margin-right: 20px;
+}
+
+/* evita estouro por box sizing e garante padding lateral para cards */
+*{box-sizing:border-box;}
+
+body{max-width:100%; /* impede overflow global acidental */}
+
+/* evita overflow horizontal global */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; /* quick fix — use se você não tiver elementos legítimos além da largura */
+  box-sizing: border-box;
+}
+
+/* garante caixas confiáveis */
+*, *::before, *::after { box-sizing: inherit; }
+
+/* torna imagens responsivas */
+img { max-width: 100%; height: auto; display: block; }
+
+/* evita que cartões com fundo branco ultrapassem a largura */
+.info, .transactions-card, .card, .hero, .banner {
+  max-width: 95%;
+  overflow: hidden; /* corta qualquer conteúdo que vaze (útil para pseudo-elements diagonais) */
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* se algum elemento usa 100vw (causa comum quando há padding), corrija para 100% */
+.full-vw-fix {
+  width: 100%; /* substituir regras que usem width:100vw e padding */
+}
+
+/* se o background usa pseudo-elementos com transforms, assegure que não vaze */
+.hero::before, .hero::after, .info::before, .info::after {
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+/* modal/content fixes */
+.modal .container{max-width:100%;padding:0;}
