@@ -8,7 +8,6 @@ console.log('transactions.js carregado', { logged, session });
 const btnLogout = document.getElementById("button-logout");
 if (btnLogout) btnLogout.addEventListener("click", logout);
 
-// safe form listener: só adiciona se existir
 const transForm = document.getElementById("transaction-form");
 if (transForm) {
   transForm.addEventListener("submit", function(e) {
@@ -50,7 +49,6 @@ if (transForm) {
     alert('Lançamento adicionado com sucesso!');
   });
 
-  // fallback: se o botão de submit estiver fora do form, liga o click para disparar o submit
   const submitBtn = document.querySelector('#transaction-modal .modal-footer button[type="submit"], #transaction-modal .modal-footer .button-default, #transaction-modal .modal-footer .btn-primary');
   if (submitBtn) {
     submitBtn.addEventListener('click', function(ev){
@@ -83,7 +81,6 @@ function checkLogged() {
 
   console.log("checkLogged -> data carregada:", data);
 
-  // renderiza ao carregar a página
   try { renderTransactions(); updateTotals(); getTransactions(); } catch (err) { /* permissivo */ }
 }
 
@@ -93,7 +90,6 @@ function logout() {
   window.location.href = 'index.html';
 }
 
-/* ---------- RENDER / UTILS ---------- */
 
 function formatCurrency(value) {
   return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(Number(value || 0));

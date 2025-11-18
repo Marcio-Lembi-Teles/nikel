@@ -1,8 +1,3 @@
-// document.getElementById('link-conta').addEventListener('click', function() {
-//     alert('O usuário clicou no link para criar uma conta.');
-//     // console.log('O usuário clicou no link para criar uma conta.');
-// })
-
 const myModal = new bootstrap.Modal("#register-modal");
 let logged = sessionStorage.getItem("logged");
 const session = localStorage.getItem("session");
@@ -64,9 +59,6 @@ document.getElementById('create-form').addEventListener('submit', function(e) {
 
     alert("Conta criada com sucesso.");
 
-    // console.log(email , password);
-    
-    // alert("Envio o form")
 })
 
 function checkLogged() {

@@ -104,44 +104,36 @@ header{
     margin-right: 20px;
 }
 
-/* evita estouro por box sizing e garante padding lateral para cards */
 *{box-sizing:border-box;}
 
-body{max-width:100%; /* impede overflow global acidental */}
+body{max-width:100%;}
 
-/* evita overflow horizontal global */
 html, body {
   max-width: 100%;
-  overflow-x: hidden; /* quick fix — use se você não tiver elementos legítimos além da largura */
+  overflow-x: hidden;
   box-sizing: border-box;
 }
 
-/* garante caixas confiáveis */
 *, *::before, *::after { box-sizing: inherit; }
 
-/* torna imagens responsivas */
 img { max-width: 100%; height: auto; display: block; }
 
-/* evita que cartões com fundo branco ultrapassem a largura */
 .info, .transactions-card, .card, .hero, .banner {
   max-width: 95%;
-  overflow: hidden; /* corta qualquer conteúdo que vaze (útil para pseudo-elements diagonais) */
+  overflow: hidden;
   padding-left: 1rem;
   padding-right: 1rem;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* se algum elemento usa 100vw (causa comum quando há padding), corrija para 100% */
 .full-vw-fix {
-  width: 100%; /* substituir regras que usem width:100vw e padding */
+  width: 100%;
 }
 
-/* se o background usa pseudo-elementos com transforms, assegure que não vaze */
 .hero::before, .hero::after, .info::before, .info::after {
   max-width: 100vw;
   box-sizing: border-box;
 }
 
-/* modal/content fixes */
 .modal .container{max-width:100%;padding:0;}
